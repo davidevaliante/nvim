@@ -4,4 +4,5 @@ return {
   require 'custom.plugins.whichkey',
   require 'custom.plugins.telescope_config',
   require 'custom.plugins.lsp-settings',
+  require 'custom.plugins.conform',
 }
