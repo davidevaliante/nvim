@@ -5,4 +5,5 @@ return {
   require 'custom.plugins.telescope_config',
   require 'custom.plugins.lsp-settings',
   require 'custom.plugins.conform',
+  require 'custom.plugins.cmp-settings',
 }

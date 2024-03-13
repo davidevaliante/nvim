@@ -13,8 +13,8 @@ Lazy -> https://github.com/folke/lazy.nvim
 - Telescope https://github.com/nvim-telescope/telescope.nvim
 - LspConfig https://github.com/neovim/nvim-lspconfig
     with dependencies: (mason, mason-tool-installer, mason-lsp)
-- Conform (formatting)
-
+- Conform (formatting) https://github.com/stevearc/conform.nvim
+- Cmp https://github.com/hrsh7th/nvim-cmp
 
 ## Configured language servers:
 - lua-ls
