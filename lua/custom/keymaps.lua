@@ -1,10 +1,22 @@
--- Custom keymaps
+-- [Custom keymaps]
+
+-- General
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit INSERT mode' })
+vim.keymap.set('n', '<leader>qq', ':qa<CR>', { desc = 'Exit Nvim (Close all Buffers)' })
+vim.keymap.set('n', '<C-n>', ':Ex<CR>', { desc = 'exits to netrw' })
+
+-- Buffers
 vim.keymap.set('i', '<C-S>', '<Esc>:w<CR>', { desc = 'Write buffer and exit INSERT mode' })
 vim.keymap.set('n', '<C-S>', ':w<CR>', { desc = 'Write buffer and exit INSERT mode' })
-vim.keymap.set('n', '<leader>qq', ':qa<CR>', { desc = 'Exit Nvim (Close all Buffers)' })
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })
+vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Goes to the previous buffer', silent = true })
+vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current buffer', silent = true })
 
--- Kickstart Keymaps
+-- Code Editing
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected block up', silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected block up', silent = true })
+
+-- [Kickstart Keymaps]
 
 -- General
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
