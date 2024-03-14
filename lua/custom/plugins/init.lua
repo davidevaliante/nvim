@@ -9,4 +9,6 @@ return {
   require 'custom.plugins.autopairs',
   require 'custom.plugins.lspkind-settings',
   require 'custom.plugins.pretty-comments',
+  require 'custom.plugins.mini-settings',
+  require 'custom.plugins.treesitter-settings',
 }

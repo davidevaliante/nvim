@@ -18,6 +18,8 @@ Lazy -> https://github.com/folke/lazy.nvim
 - Autopairs -> https://github.com/windwp/nvim-autopairs (configured with Cmp)
 - Lspkind -> https://github.com/onsails/lspkind.nvim
 - Todo-Comments (pretty-comments) -> https://github.com/folke/todo-comments.nvim
+- Treesitter -> https://github.com/nvim-treesitter/nvim-treesitter
+    with module incremental selection
 
 ## Configured language servers:
 - lua-ls -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
