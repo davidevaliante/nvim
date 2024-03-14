@@ -16,6 +16,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - Conform (formatting) https://github.com/stevearc/conform.nvim
 - Cmp https://github.com/hrsh7th/nvim-cmp
 - Autopairs https://github.com/windwp/nvim-autopairs (configured with Cmp)
+- Lspkind https://github.com/onsails/lspkind.nvim
 
 ## Configured language servers:
 - lua-ls

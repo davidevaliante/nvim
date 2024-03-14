@@ -7,4 +7,5 @@ return {
   require 'custom.plugins.conform',
   require 'custom.plugins.cmp-settings',
   require 'custom.plugins.autopairs',
+  require 'custom.plugins.lspkind-settings',
 }
