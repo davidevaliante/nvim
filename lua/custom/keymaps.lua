@@ -16,6 +16,17 @@ vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current b
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected block up', silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected block up', silent = true })
 
+-- Flash
+-- stylua: ignore
+local flash = {
+    { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+    { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+    { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+    { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+    { "<leader>ss", mode = { "n", "x", "o" }, function() require("flash").jump({ continue = true }) end, desc = "Flash continue last search" },
+}
+
 -- [Kickstart Keymaps]
 
 -- General
@@ -32,3 +43,7 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+return {
+  flash = flash,
+}

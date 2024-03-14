@@ -11,4 +11,5 @@ return {
   require 'custom.plugins.pretty-comments',
   require 'custom.plugins.mini-settings',
   require 'custom.plugins.treesitter-settings',
+  require 'custom.plugins.flash-settings',
 }

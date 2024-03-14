@@ -1,4 +1,5 @@
 -- https://github.com/neovim/nvim-lspconfig
+
 return { -- LSP Configuration & Plugins
   'neovim/nvim-lspconfig',
   dependencies = {
