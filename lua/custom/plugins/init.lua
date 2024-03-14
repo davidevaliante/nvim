@@ -8,4 +8,5 @@ return {
   require 'custom.plugins.cmp-settings',
   require 'custom.plugins.autopairs',
   require 'custom.plugins.lspkind-settings',
+  require 'custom.plugins.pretty-comments',
 }
