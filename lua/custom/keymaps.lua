@@ -35,6 +35,13 @@ local oil = {
   end,
 }
 
+-- Toggle term
+vim.keymap.set('n', '<C-\\>', ':ToggleTerm<CR>', { desc = 'Opens the terminal on bottom' })
+vim.keymap.set('t', '<ESC>', '<C-\\><C-n>', { desc = 'Toggles the terminal on bottom' })
+vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>:ToggleTerm<CR>', { desc = 'Toggles the currently open terminal' })
+vim.keymap.set('n', '<C-p>', ':ToggleTerm direction=float<CR>', { desc = 'Opens a floating terminal' })
+vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>', { desc = 'Toggles the currently float terminal' })
+
 -- [Kickstart Keymaps]
 
 -- General

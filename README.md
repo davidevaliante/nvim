@@ -22,6 +22,7 @@ Lazy -> https://github.com/folke/lazy.nvim
     with module incremental selection
 - Flash https://github.com/folke/flash.nvim
 - Oil https://github.com/stevearc/oil.nvim
+- Toggleterm https://github.com/akinsho/toggleterm.nvim
 
 ## Configured language servers:
 - lua-ls -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls

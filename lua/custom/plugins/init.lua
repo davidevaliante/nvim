@@ -13,4 +13,5 @@ return {
   require 'custom.plugins.treesitter-settings',
   require 'custom.plugins.flash-settings',
   require 'custom.plugins.oil-settings',
+  require 'custom.plugins.toggleterm-settings',
 }
