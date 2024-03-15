@@ -3,6 +3,9 @@
 - gcc -> (kickstart) -> https://gcc.gnu.org
 - Nerd Font (Terminal/Nvim) -> https://www.nerdfonts.com
 
+## Theme
+- cattpuccin https://github.com/catppuccin/nvim
+
 ## Plugin manager:
 Lazy -> https://github.com/folke/lazy.nvim
 

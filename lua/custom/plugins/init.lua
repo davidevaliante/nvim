@@ -15,4 +15,5 @@ return {
   require 'custom.plugins.oil-settings',
   require 'custom.plugins.toggleterm-settings',
   require 'custom.plugins.lazygit-settings',
+  require 'custom.plugins.catppuccin-settings',
 }
