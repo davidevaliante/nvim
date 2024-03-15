@@ -42,6 +42,9 @@ vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>:ToggleTerm<CR>', { desc = 'Toggles th
 vim.keymap.set('n', '<C-p>', ':ToggleTerm direction=float<CR>', { desc = 'Opens a floating terminal' })
 vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>', { desc = 'Toggles the currently float terminal' })
 
+-- LazyGit
+vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Opens LazyGit' })
+
 -- [Kickstart Keymaps]
 
 -- General

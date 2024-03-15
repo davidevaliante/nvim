@@ -23,6 +23,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - Flash https://github.com/folke/flash.nvim
 - Oil https://github.com/stevearc/oil.nvim
 - Toggleterm https://github.com/akinsho/toggleterm.nvim
+- Lazygit https://github.com/kdheepak/lazygit.nvim https://github.com/jesseduffield/lazygit
 
 ## Configured language servers:
 - lua-ls -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
