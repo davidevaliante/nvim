@@ -5,6 +5,7 @@
 
 ## Theme
 - cattpuccin https://github.com/catppuccin/nvim
+- tokyonight https://github.com/folke/tokyonight.nvim
 
 ## Plugin manager:
 Lazy -> https://github.com/folke/lazy.nvim
