@@ -2,7 +2,7 @@
 
 -- General
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit INSERT mode' })
-vim.keymap.set('n', '<leader>qq', ':qa<CR>', { desc = 'Exit Nvim (Close all Buffers)' })
+vim.keymap.set('n', '<leader>qq', ':qa!<CR>', { desc = 'Exit Nvim (Close all Buffers)' })
 vim.keymap.set('n', '<C-n>', ':Ex<CR>', { desc = 'exits to netrw' })
 
 -- Buffers
@@ -27,6 +27,14 @@ local flash = {
     { "<leader>ss", mode = { "n", "x", "o" }, function() require("flash").jump({ continue = true }) end, desc = "Flash continue last search" },
 }
 
+-- Oil
+vim.keymap.set('n', '<C-n>', ':Oil<CR>', { desc = 'Opens Oil tree', silent = true })
+local oil = {
+  ['<C-s>'] = function()
+    vim.cmd 'w'
+  end,
+}
+
 -- [Kickstart Keymaps]
 
 -- General
@@ -46,4 +54,5 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 return {
   flash = flash,
+  oil = oil,
 }

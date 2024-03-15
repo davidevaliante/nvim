@@ -12,4 +12,5 @@ return {
   require 'custom.plugins.mini-settings',
   require 'custom.plugins.treesitter-settings',
   require 'custom.plugins.flash-settings',
+  require 'custom.plugins.oil-settings',
 }
