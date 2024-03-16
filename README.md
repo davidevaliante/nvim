@@ -35,6 +35,9 @@ Lazy -> https://github.com/folke/lazy.nvim
 - lua-ls -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
 - denols (not properly configured for path aliases) -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#denols
 - tsserver -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
+- tailwind -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss
+- emmet -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#emmet_language_server 
+
 ## Configured formatters by filetype:
 NOTE: these needs to be installed via mason or external sources
 - ts, js, tsx, jsx : prettierd/prettier

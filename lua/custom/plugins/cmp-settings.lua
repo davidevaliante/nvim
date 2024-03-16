@@ -31,6 +31,9 @@ return { -- Autocompletion
       window = {
         completion = completion_window_settings,
       },
+      performance = {
+        max_view_entries = 15,
+      },
       formatting = {
         fields = { 'kind', 'abbr', 'menu' },
         format = function(entry, vim_item)
