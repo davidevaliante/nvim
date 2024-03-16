@@ -5,7 +5,7 @@
 
 ## Theme
 - cattpuccin https://github.com/catppuccin/nvim
-- tokyonight https://github.com/folke/tokyonight.nvim
+- tokyonight https://github.com/folke/tokyonight.nvim (current)
 
 ## Plugin manager:
 Lazy -> https://github.com/folke/lazy.nvim
@@ -31,6 +31,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - Colorizer https://github.com/norcalli/nvim-colorizer.lua
 - Zenmode https://github.com/folke/zen-mode.nvim
 - AutoTag https://github.com/windwp/nvim-ts-autotag
+- TailwindSort https://github.com/laytan/tailwind-sorter.nvim
 
 ## Configured language servers:
 - lua-ls -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
@@ -41,5 +42,6 @@ Lazy -> https://github.com/folke/lazy.nvim
 
 ## Configured formatters by filetype:
 NOTE: these needs to be installed via mason or external sources
-- ts, js, tsx, jsx : prettierd/prettier
+- ts, js, tsx, jsx : [prettierd/prettier, tailwindformatter]
 - lua : stylua
+

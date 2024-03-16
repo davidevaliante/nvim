@@ -18,4 +18,5 @@ return {
   -- require 'custom.plugins.catppuccin-settings',
   require 'custom.plugins.tokyonight-settings',
   require 'custom.plugins.zenmode-settings',
+  require 'custom.plugins.tailwindsort-settings',
 }
