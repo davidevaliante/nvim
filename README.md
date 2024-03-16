@@ -30,6 +30,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - Lazygit https://github.com/kdheepak/lazygit.nvim https://github.com/jesseduffield/lazygit
 - Colorizer https://github.com/norcalli/nvim-colorizer.lua
 - Zenmode https://github.com/folke/zen-mode.nvim
+- AutoTag https://github.com/windwp/nvim-ts-autotag
 
 ## Configured language servers:
 - lua-ls -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
