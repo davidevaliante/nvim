@@ -7,7 +7,7 @@ return { -- You can easily change to a different colorscheme.
   priority = 1000, -- make sure to load this before all the other start plugins
   opts = {
     on_colors = function(colors)
-      colors.bg = '#0f0f0f'
+      -- colors.bg = '#0f0f0f'
     end,
   },
   init = function()

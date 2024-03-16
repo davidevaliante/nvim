@@ -28,11 +28,12 @@ Lazy -> https://github.com/folke/lazy.nvim
 - Oil https://github.com/stevearc/oil.nvim
 - Toggleterm https://github.com/akinsho/toggleterm.nvim
 - Lazygit https://github.com/kdheepak/lazygit.nvim https://github.com/jesseduffield/lazygit
+- Colorizer https://github.com/norcalli/nvim-colorizer.lua
 
 ## Configured language servers:
 - lua-ls -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
-- denols -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#denols
-
+- denols (not properly configured for path aliases) -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#denols
+- tsserver -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
 ## Configured formatters by filetype:
 NOTE: these needs to be installed via mason or external sources
 - ts, js, tsx, jsx : prettierd/prettier

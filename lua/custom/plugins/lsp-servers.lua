@@ -1,4 +1,5 @@
 return {
   lua_ls = require 'custom.plugins.lspservers.lua-ls',
-  denols = require 'custom.plugins.lspservers.denols',
+  tsserver = require('lspconfig').tsserver.setup {},
+  -- denols = require 'custom.plugins.lspservers.denols',
 }
