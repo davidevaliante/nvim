@@ -4,7 +4,7 @@
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit INSERT mode' })
 vim.keymap.set('n', '<leader>qq', ':qa!<CR>', { desc = 'Exit Nvim (Close all Buffers)' })
 vim.keymap.set('n', '<C-n>', ':Ex<CR>', { desc = 'exits to netrw' })
-
+vim.keymap.set('n', '<C-m>', '@h', { desc = 'Repeats the macro registered on h' })
 -- Buffers
 vim.keymap.set('i', '<C-S>', '<Esc>:w<CR>', { desc = 'Write buffer and exit INSERT mode' })
 vim.keymap.set('n', '<C-S>', ':w<CR>', { desc = 'Write buffer and exit INSERT mode' })
@@ -44,6 +44,9 @@ vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>', { des
 
 -- LazyGit
 vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Opens LazyGit' })
+
+-- Zenmode
+vim.keymap.set('n', '<C-z>', ':ZenMode<CR>', { desc = 'Toggles ZenMode' })
 
 -- [Kickstart Keymaps]
 
