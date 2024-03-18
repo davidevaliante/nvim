@@ -14,7 +14,20 @@ return { -- Collection of various small independent plugins/modules
     -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
     -- - sd'   - [S]urround [D]elete [']quotes
     -- - sr)'  - [S]urround [R]eplace [)] [']
-    -- require('mini.surround').setup()
+    require('mini.surround').setup {
+      mappings = {
+        add = '<C-a>', -- Add surrounding in Normal and Visual modes
+        delete = '', -- Delete surrounding
+        find = '', -- Find surrounding (to the right)
+        find_left = '', -- Find surrounding (to the left)
+        highlight = '', -- Highlight surrounding
+        replace = '', -- Replace surrounding
+        update_n_lines = '', -- Update `n_lines`
+
+        suffix_last = '', -- Suffix to search with "prev" method
+        suffix_next = '', -- Suffix to search with "next" method
+      },
+    }
 
     -- Simple and easy statusline.
     --  You could remove this setup call if you don't like it,

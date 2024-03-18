@@ -19,4 +19,5 @@ return {
   require 'custom.plugins.tokyonight-settings',
   require 'custom.plugins.zenmode-settings',
   require 'custom.plugins.tailwindsort-settings',
+  require 'custom.plugins.spectre-settings',
 }
