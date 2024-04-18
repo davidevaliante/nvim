@@ -15,6 +15,7 @@ vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current b
 -- Code Editing
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected block up', silent = true })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected block up', silent = true })
+vim.keymap.set('n', '<leader>vs', ':vsplit<CR>', { desc = 'Create a vertical split', silent = true })
 
 -- Flash
 -- stylua: ignore

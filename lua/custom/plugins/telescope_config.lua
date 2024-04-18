@@ -17,6 +17,15 @@ return {
   },
   config = function()
     require('telescope').setup {
+      defaults = {
+        file_ignore_patterns = {
+          '%.webp$',
+          '%.png$',
+          '%.skel$',
+          '%.jpg$',
+          '%.jpeg$',
+        },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
