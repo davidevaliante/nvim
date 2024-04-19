@@ -4,6 +4,7 @@ return {
   'akinsho/toggleterm.nvim',
   version = '*',
   opts = {
+    persist_mode = false,
     highlights = {
       FloatBorder = {
         guifg = '#631075',
