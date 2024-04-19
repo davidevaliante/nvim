@@ -20,4 +20,6 @@ return {
   require 'custom.plugins.zenmode-settings',
   require 'custom.plugins.tailwindsort-settings',
   require 'custom.plugins.spectre-settings',
+  require 'custom.plugins.copilot-settings',
+  require 'custom.plugins.copilotcmp-settings',
 }
