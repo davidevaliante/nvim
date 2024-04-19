@@ -22,4 +22,5 @@ return {
   require 'custom.plugins.spectre-settings',
   require 'custom.plugins.copilot-settings',
   require 'custom.plugins.copilotcmp-settings',
+  require 'custom.plugins.gpt-settings',
 }

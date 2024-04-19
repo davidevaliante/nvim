@@ -32,6 +32,12 @@ Lazy -> https://github.com/folke/lazy.nvim
 - Zenmode https://github.com/folke/zen-mode.nvim
 - AutoTag https://github.com/windwp/nvim-ts-autotag
 - TailwindSort https://github.com/laytan/tailwind-sorter.nvim
+- Copilot https://github.com/zbirenbaum/copilot.lua
+- CopilotCmp https://github.com/zbirenbaum/copilot-cmp?ref=tamerlan.dev
+- ChatGPT https://github.com/jackMort/ChatGPT.nvim (see dependencies)
+
+## Dependencies
+- ChatGPT requires a key.txt.gpg file in ~
 
 ## Configured language servers:
 - lua-ls -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls
@@ -39,6 +45,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - tsserver -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
 - tailwind -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss
 - emmet -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#emmet_language_server 
+- golang -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
 
 ## Configured formatters by filetype:
 NOTE: these needs to be installed via mason or external sources
