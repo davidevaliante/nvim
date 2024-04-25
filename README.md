@@ -36,6 +36,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - CopilotCmp (disabled) https://github.com/zbirenbaum/copilot-cmp?ref=tamerlan.dev
 - ChatGPT https://github.com/jackMort/ChatGPT.nvim (see dependencies)
 - Cybu https://github.com/ghillb/cybu.nvim
+- Added autosession https://github.com/rmagatti/auto-session
 
 ## Dependencies
 - ChatGPT requires a key.txt.gpg file in ~
