@@ -37,17 +37,17 @@ local oil = {
 }
 
 -- Toggle term
-vim.keymap.set('n', '<C-\\>', ':ToggleTerm<CR>', { desc = 'Opens the terminal on bottom' })
-vim.keymap.set('t', '<ESC>', '<C-\\><C-n>', { desc = 'Toggles the terminal on bottom' })
-vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>:ToggleTerm<CR>', { desc = 'Toggles the currently open terminal' })
-vim.keymap.set('n', '<C-p>', ':ToggleTerm direction=float<CR>', { desc = 'Opens a floating terminal' })
-vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>', { desc = 'Toggles the currently float terminal' })
+vim.keymap.set('n', '<C-\\>', ':ToggleTerm<CR>', { desc = 'Opens the terminal on bottom', silent = true })
+vim.keymap.set('t', '<ESC>', '<C-\\><C-n>', { desc = 'Toggles the terminal on bottom', silent = true })
+vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>:ToggleTerm<CR>', { desc = 'Toggles the currently open terminal', silent = true })
+vim.keymap.set('n', '<C-p>', ':ToggleTerm direction=float<CR>', { desc = 'Opens a floating terminal', silent = true })
+vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>', { desc = 'Toggles the currently float terminal', silent = true })
 
 -- LazyGit
-vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Opens LazyGit' })
+vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Opens LazyGit', silent = true })
 
 -- Zenmode
-vim.keymap.set('n', '<C-z>', ':ZenMode<CR>', { desc = 'Toggles ZenMode' })
+vim.keymap.set('n', '<C-z>', ':ZenMode<CR>', { desc = 'Toggles ZenMode', silent = true })
 
 -- [Kickstart Keymaps]
 

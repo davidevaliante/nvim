@@ -23,4 +23,5 @@ return {
   require 'custom.plugins.copilot-settings',
   require 'custom.plugins.copilotcmp-settings',
   require 'custom.plugins.gpt-settings',
+  require 'custom.plugins.cybu-settings',
 }

@@ -33,8 +33,9 @@ Lazy -> https://github.com/folke/lazy.nvim
 - AutoTag https://github.com/windwp/nvim-ts-autotag
 - TailwindSort https://github.com/laytan/tailwind-sorter.nvim
 - Copilot https://github.com/zbirenbaum/copilot.lua
-- CopilotCmp https://github.com/zbirenbaum/copilot-cmp?ref=tamerlan.dev
+- CopilotCmp (disabled) https://github.com/zbirenbaum/copilot-cmp?ref=tamerlan.dev
 - ChatGPT https://github.com/jackMort/ChatGPT.nvim (see dependencies)
+- Cybu https://github.com/ghillb/cybu.nvim
 
 ## Dependencies
 - ChatGPT requires a key.txt.gpg file in ~

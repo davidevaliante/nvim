@@ -1,4 +1,6 @@
 local function cmpMenuHighlights()
+  -- customization for cybu
+
   -- Customization for Pmenu
   vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#ee5396', fg = '#393939' })
   vim.api.nvim_set_hl(0, 'Pmenu', { fg = '#525252', bg = '#262626' })
@@ -16,10 +18,14 @@ local function cmpMenuHighlights()
   local color_seven = '#673AB7'
   local color_eight = '#42be65'
 
+  vim.api.nvim_set_hl(0, 'CybuBackground', { fg = text_color, bg = '#1f1f1f' })
+  vim.api.nvim_set_hl(0, 'CybuAdjacent', { fg = '#a8a8a8', bg = 'NONE' })
+  vim.api.nvim_set_hl(0, 'CybuBorder', { fg = '#ed9140' })
+
   -- vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { fg = text_color, bg = 'NONE', strikethrough = true })
   -- vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { fg = text_color, bg = 'NONE', bold = true })
   -- vim.api.nvim_set_hl(0, 'CmpItemMenu', { fg = text_color, bg = 'NONE', italic = true })
-  --
+
   vim.api.nvim_set_hl(0, 'CmpItemKindField', { fg = text_color, bg = color_one })
   vim.api.nvim_set_hl(0, 'CmpItemKindProperty', { fg = text_color, bg = color_one })
   vim.api.nvim_set_hl(0, 'CmpItemKindEvent', { fg = text_color, bg = color_one })
