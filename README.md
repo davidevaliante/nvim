@@ -37,6 +37,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - ChatGPT https://github.com/jackMort/ChatGPT.nvim (see dependencies)
 - Cybu https://github.com/ghillb/cybu.nvim
 - Added autosession https://github.com/rmagatti/auto-session
+- friendly-snippets https://github.com/rafamadriz/friendly-snippets
 
 ## Dependencies
 - ChatGPT requires a key.txt.gpg file in ~
