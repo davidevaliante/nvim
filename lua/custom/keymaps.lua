@@ -7,7 +7,8 @@ vim.keymap.set('n', '<C-n>', ':Ex<CR>', { desc = 'exits to netrw' })
 vim.keymap.set('n', '<C-m>', '@h', { desc = 'Repeats the macro registered on h' })
 
 -- Lsp
-vim.keymap.set('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>', { desc = 'Goes to definition under cursor', silent = true })
+vim.keymap.set('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>',
+  { desc = 'Goes to definition under cursor', silent = true })
 
 -- Buffers
 vim.keymap.set('i', '<C-S>', '<Esc>:w<CR>', { desc = 'Write buffer and exit INSERT mode' })
@@ -24,12 +25,12 @@ vim.keymap.set('n', '<leader>vs', ':vsplit<CR>', { desc = 'Create a vertical spl
 -- Flash
 -- stylua: ignore
 local flash = {
-    { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-    { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-    { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-    { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-    { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-    { "<leader>ss", mode = { "n", "x", "o" }, function() require("flash").jump({ continue = true }) end, desc = "Flash continue last search" },
+  { "s",          mode = { "n", "x", "o" }, function() require("flash").jump() end,                    desc = "Flash" },
+  { "S",          mode = { "n", "x", "o" }, function() require("flash").treesitter() end,              desc = "Flash Treesitter" },
+  { "r",          mode = "o",               function() require("flash").remote() end,                  desc = "Remote Flash" },
+  { "R",          mode = { "o", "x" },      function() require("flash").treesitter_search() end,       desc = "Treesitter Search" },
+  { "<c-s>",      mode = { "c" },           function() require("flash").toggle() end,                  desc = "Toggle Flash Search" },
+  { "<leader>ss", mode = { "n", "x", "o" }, function() require("flash").jump({ continue = true }) end, desc = "Flash continue last search" },
 }
 
 -- Oil
@@ -41,11 +42,10 @@ local oil = {
 }
 
 -- Toggle term
-vim.keymap.set('n', '<C-\\>', ':ToggleTerm<CR>', { desc = 'Opens the terminal on bottom', silent = true })
-vim.keymap.set('t', '<ESC>', '<C-\\><C-n>', { desc = 'Toggles the terminal on bottom', silent = true })
-vim.keymap.set('t', '<C-\\>', '<C-\\><C-n>:ToggleTerm<CR>', { desc = 'Toggles the currently open terminal', silent = true })
+vim.keymap.set('n', '<C-\\>', ':ToggleTerm direction=tab<CR>', { desc = 'Opens the terminal in a tab', silent = true })
 vim.keymap.set('n', '<C-p>', ':ToggleTerm direction=float<CR>', { desc = 'Opens a floating terminal', silent = true })
-vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>', { desc = 'Toggles the currently float terminal', silent = true })
+vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>',
+  { desc = 'Toggles the currently float terminal', silent = true })
 
 -- LazyGit
 vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Opens LazyGit', silent = true })

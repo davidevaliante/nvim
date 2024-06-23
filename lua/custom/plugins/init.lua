@@ -25,4 +25,5 @@ return {
   -- require 'custom.plugins.gpt-settings',
   require 'custom.plugins.cybu-settings',
   require 'custom.plugins.autosession-settings',
+  require 'custom.plugins.autotag'
 }
