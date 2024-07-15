@@ -12,4 +12,6 @@ return {
     },
   },
   keys = require('custom.keymaps').flash,
+  config = function()
+  end
 }

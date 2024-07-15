@@ -41,6 +41,9 @@ local oil = {
   end,
 }
 
+-- Neotreee
+vim.keymap.set('n', '<C-t>', ':Neotree toggle=true<CR>', { desc = 'Opens the neo tree view', silent = true })
+
 -- Toggle term
 vim.keymap.set('n', '<C-\\>', ':ToggleTerm direction=tab<CR>', { desc = 'Opens the terminal in a tab', silent = true })
 vim.keymap.set('n', '<C-p>', ':ToggleTerm direction=float<CR>', { desc = 'Opens a floating terminal', silent = true })
