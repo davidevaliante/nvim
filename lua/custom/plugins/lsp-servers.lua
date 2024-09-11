@@ -3,7 +3,7 @@ local filterReactDTS = require('custom.utils').filterReactDTS
 
 return {
   lua_ls = require 'custom.plugins.lspservers.lua-ls',
-  tsserver = {
+  ts_ls = {
     init_options = {
       preferences = {
         importModuleSpecifierPreference = 'non-relative',
