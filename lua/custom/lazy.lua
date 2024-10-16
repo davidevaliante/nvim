@@ -32,3 +32,6 @@ require('lazy').setup({
 }, {
   ui = lazy_ui_settings,
 })
+
+-- avante tokenizer startup as suggested in their docs
+require('avante_lib').load()
