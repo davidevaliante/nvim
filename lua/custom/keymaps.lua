@@ -11,8 +11,8 @@ vim.keymap.set('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>',
   { desc = 'Goes to definition under cursor', silent = true })
 
 -- Buffers
-vim.keymap.set('i', '<C-S>', '<Esc>:w<CR>', { desc = 'Write buffer and exit INSERT mode' })
-vim.keymap.set('n', '<C-S>', ':w<CR>', { desc = 'Write buffer and exit INSERT mode' })
+vim.keymap.set('i', '<C-S>', '<Esc>:w<CR>', { desc = 'Write buffer and exit INSERT mode', silent = true })
+vim.keymap.set('n', '<C-S>', ':w<CR>', { desc = 'Write buffer and exit INSERT mode', silent = true })
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })
 vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Goes to the previous buffer', silent = true })
 vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current buffer', silent = true })
@@ -52,6 +52,10 @@ vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>',
 -- LazyGit
 vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Opens LazyGit', silent = true })
 
+-- Git
+vim.keymap.set('n', '<leader>dw', ':DiffviewOpen<CR>', { desc = 'Opens LazyGit', silent = true })
+vim.keymap.set('n', '<leader>dwc', ':DiffviewClose<CR>', { desc = 'Opens LazyGit', silent = true })
+
 -- Zenmode
 vim.keymap.set('n', '<C-z>', ':ZenMode<CR>', { desc = 'Toggles ZenMode', silent = true })
 
@@ -71,6 +75,8 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>xx', ':Trouble diagnostics toggle focus=true<CR>',
+  { desc = 'Open diagnostic [Q]uickfix list' })
 
 return {
   flash = flash,

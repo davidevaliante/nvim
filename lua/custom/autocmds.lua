@@ -9,6 +9,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = '*',
+  callback = function()
+    vim.cmd('silent! write')  -- Perform the save silently
+    vim.cmd('echon "saved~"') -- Clear any message after saving
+  end,
+})
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
   callback = function(event)
