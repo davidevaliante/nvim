@@ -40,6 +40,8 @@ Lazy -> https://github.com/folke/lazy.nvim
 - friendly-snippets https://github.com/rafamadriz/friendly-snippets
 - diffview https://github.com/sindrets/diffview.nvim
 - Trouble https://github.com/folke/trouble.nvim
+- Fidget https://github.com/j-hui/fidget.nvim
+
 
 ## Dependencies
 - ChatGPT requires a key.txt.gpg file in ~
@@ -51,6 +53,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - tailwind -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tailwindcss
 - emmet -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#emmet_language_server 
 - golang -> https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#gopls
+
 
 ## Configured formatters by filetype:
 NOTE: these needs to be installed via mason or external sources

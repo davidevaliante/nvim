@@ -23,6 +23,7 @@ return {
   require 'custom.plugins.lualine',
   require 'custom.plugins.trouble-settings',
   require 'custom.plugins.diffview-settings',
+  require 'custom.plugins.fidget-settings',
   -- require 'custom.plugins.gpt-settings',
   -- require 'custom.plugins.cybu-settings',
   require 'custom.plugins.autosession-settings',
