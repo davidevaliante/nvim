@@ -34,4 +34,4 @@ require('lazy').setup({
 })
 
 -- avante tokenizer startup as suggested in their docs
-require('avante_lib').load()
+-- require('avante_lib').load()

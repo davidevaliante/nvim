@@ -39,6 +39,6 @@ return {
   -- require 'custom.plugins.themes.nightofox-settings',
   -- require 'custom.plugins.themes.tokyonight-settings',
   -- require 'custom.plugins.themes.tokyonight-custom-settings',
-  require 'custom.plugins.avante',
+  -- require 'custom.plugins.avante',
   require 'custom.plugins.render-markdown'
 }
