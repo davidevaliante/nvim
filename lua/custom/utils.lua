@@ -17,7 +17,16 @@ local function filterReactDTS(value)
   return string.match(value.targetUri, 'd.ts') == nil
 end
 
+local function notifyGrappleToggle()
+  require("grapple").toggle()
+  print("toggled mark")
+  vim.fn.timer_start(3000, function()
+    print(" ")
+  end)
+end
+
 return {
+  notifiGrappleToggle = notifyGrappleToggle,
   filter = filter,
   filterReactDTS = filterReactDTS,
 }

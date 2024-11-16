@@ -41,7 +41,7 @@ Lazy -> https://github.com/folke/lazy.nvim
 - diffview https://github.com/sindrets/diffview.nvim
 - Trouble https://github.com/folke/trouble.nvim
 - Fidget https://github.com/j-hui/fidget.nvim
-
+- Grapple https://github.com/cbochs/grapple.nvim
 
 ## Dependencies
 - ChatGPT requires a key.txt.gpg file in ~

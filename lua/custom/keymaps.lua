@@ -1,3 +1,4 @@
+local notifiGrappleToggle = require('custom.utils').notifiGrappleToggle
 -- [Custom keymaps]
 
 -- General
@@ -10,12 +11,18 @@ vim.keymap.set('n', '<C-m>', '@h', { desc = 'Repeats the macro registered on h' 
 vim.keymap.set('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>',
   { desc = 'Goes to definition under cursor', silent = true })
 
+
 -- Buffers
 vim.keymap.set('i', '<C-S>', '<Esc>:w<CR>', { desc = 'Write buffer and exit INSERT mode', silent = true })
 vim.keymap.set('n', '<C-S>', ':w<CR>', { desc = 'Write buffer and exit INSERT mode', silent = true })
-vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })
-vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Goes to the previous buffer', silent = true })
+vim.keymap.set('n', '<C-m><C-m>', notifiGrappleToggle, { desc = 'Add current buffer to Grapple' })
+vim.keymap.set('n', '<Tab>', ':Grapple cycle_tags next<CR>', { desc = 'Cycle next Grapple tag', silent = true })
+vim.keymap.set('n', '<S-Tab>', ':Grapple cycle_tags prev<CR>', { desc = 'Cycle previous Grapple tag', silent = true })
 vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current buffer', silent = true })
+
+-- No Grapple Tab keymap
+-- vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })
+-- vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Goes to the previous buffer', silent = true })
 
 -- Code Editing
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected block up', silent = true })
@@ -42,6 +49,7 @@ local oil = {
 
 -- Neotreee
 vim.keymap.set('n', '<C-t>', ':Neotree toggle=true<CR>', { desc = 'Opens the neo tree view', silent = true })
+
 
 -- Toggle term
 vim.keymap.set('n', '<C-\\>', ':ToggleTerm direction=tab<CR>', { desc = 'Opens the terminal in a tab', silent = true })
