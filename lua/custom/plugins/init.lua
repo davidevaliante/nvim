@@ -25,6 +25,7 @@ return {
   require 'custom.plugins.diffview-settings',
   require 'custom.plugins.fidget-settings',
   require 'custom.plugins.grapple-settings',
+  require 'custom.plugins.aerial-settings',
   -- require 'custom.plugins.gpt-settings',
   -- require 'custom.plugins.cybu-settings',
   require 'custom.plugins.autosession-settings',

@@ -19,6 +19,8 @@ vim.keymap.set('n', '<C-m><C-m>', notifiGrappleToggle, { desc = 'Add current buf
 vim.keymap.set('n', '<Tab>', ':Grapple cycle_tags next<CR>', { desc = 'Cycle next Grapple tag', silent = true })
 vim.keymap.set('n', '<S-Tab>', ':Grapple cycle_tags prev<CR>', { desc = 'Cycle previous Grapple tag', silent = true })
 vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current buffer', silent = true })
+vim.keymap.set('n', '<C-o><C-l>', ':AerialToggle<CR>', { desc = 'Toggles Aerial side panel', silent = true })
+
 
 -- No Grapple Tab keymap
 -- vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })
