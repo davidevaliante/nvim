@@ -1,4 +1,5 @@
 local notifiGrappleToggle = require('custom.utils').notifiGrappleToggle
+local jumpToGrappleIndex = require('custom.utils').jumpToGrappleIndex
 -- [Custom keymaps]
 
 -- General
@@ -21,6 +22,12 @@ vim.keymap.set('n', '<S-Tab>', ':Grapple cycle_tags prev<CR>', { desc = 'Cycle p
 vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current buffer', silent = true })
 vim.keymap.set('n', '<C-o><C-l>', ':AerialToggle<CR>', { desc = 'Toggles Aerial side panel', silent = true })
 
+-- Select grapple index
+for i = 1, 9 do
+  vim.keymap.set('n', '<A-' .. i .. '>', function()
+    jumpToGrappleIndex(i)
+  end, { noremap = true, silent = true })
+end
 
 -- No Grapple Tab keymap
 -- vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })

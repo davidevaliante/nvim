@@ -24,7 +24,13 @@ local function notifyGrappleToggle()
   })
 end
 
+local function jumpToGrappleIndex(index)
+  require('grapple').select({ index = index })
+end
+
+
 return {
+  jumpToGrappleIndex = jumpToGrappleIndex,
   notifiGrappleToggle = notifyGrappleToggle,
   filter = filter,
   filterReactDTS = filterReactDTS,
