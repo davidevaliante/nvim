@@ -30,5 +30,6 @@ return {
       bg = "none",
       bold = true
     })
+    vim.api.nvim_set_hl(0, 'LspReferenceRead', { bg = 'NONE' })
   end
 }

@@ -24,12 +24,6 @@ return { -- LSP Configuration & Plugins
       'stylua', -- Used to format lua code
     })
 
-    local lspconfig = require 'lspconfig'
-
-    lspconfig.gdscript.setup {
-      cmd = { 'godot-wsl-lsp', '--useMirroredNetworking' },
-    }
-
     require('mason-lspconfig').setup {
       handlers = {
         function(server_name)

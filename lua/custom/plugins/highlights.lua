@@ -60,6 +60,7 @@ local function cmpMenuHighlights()
   vim.api.nvim_set_hl(0, 'CmpItemKindTypeParameter', { fg = text_color, bg = color_eight })
 end
 
+
 return {
   cmp = cmpMenuHighlights,
 }
