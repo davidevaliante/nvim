@@ -19,10 +19,9 @@ end
 
 local function notifyGrappleToggle()
   require("grapple").toggle()
-  print("toggled mark")
-  vim.fn.timer_start(3000, function()
-    print(" ")
-  end)
+  require('fidget').notify("toggled mark for this buffer", nil, {
+    annote = "Grapple"
+  })
 end
 
 return {

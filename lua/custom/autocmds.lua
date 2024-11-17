@@ -12,8 +12,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = '*',
   callback = function()
-    vim.cmd('silent! write')  -- Perform the save silently
-    vim.cmd('echon "saved~"') -- Clear any message after saving
+    vim.cmd('silent! write') -- Perform the save silently
+    require('fidget').notify("saved~")
+    vim.cmd('echon ""')      -- Clear any message after saving
   end,
 })
 

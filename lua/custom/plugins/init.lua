@@ -26,8 +26,10 @@ return {
   require 'custom.plugins.fidget-settings',
   require 'custom.plugins.grapple-settings',
   require 'custom.plugins.aerial-settings',
+  -- require 'custom.plugins.transparent-settings',
   -- require 'custom.plugins.gpt-settings',
   -- require 'custom.plugins.cybu-settings',
+  -- require 'custom.plugins.avante',
   require 'custom.plugins.autosession-settings',
   require 'custom.plugins.autotag',
   require 'custom.plugins.neotree-settings',
@@ -37,11 +39,9 @@ return {
   -- require 'custom.plugins.themes.poimandres',
   -- require 'custom.plugins.themes.cyberdream-settings',
   -- require 'custom.plugins.themes.rosepine-settings',
-  -- require 'custom.plugins.themes.cyberdream-settings',
   -- require 'custom.plugins.themes.catppuccin-settings',
   -- require 'custom.plugins.themes.nightofox-settings',
   -- require 'custom.plugins.themes.tokyonight-settings',
   -- require 'custom.plugins.themes.tokyonight-custom-settings',
-  -- require 'custom.plugins.avante',
   require 'custom.plugins.render-markdown'
 }

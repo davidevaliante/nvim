@@ -5,7 +5,7 @@ local notifiGrappleToggle = require('custom.utils').notifiGrappleToggle
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit INSERT mode' })
 vim.keymap.set('n', '<leader>qq', ':qa!<CR>', { desc = 'Exit Nvim (Close all Buffers)' })
 vim.keymap.set('n', '<C-n>', ':Ex<CR>', { desc = 'exits to netrw' })
-vim.keymap.set('n', '<C-m>', '@h', { desc = 'Repeats the macro registered on h' })
+vim.keymap.set('n', '<C-q>', '@q', { desc = 'Repeats the macro registered on h' })
 
 -- Lsp
 vim.keymap.set('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>',
