@@ -30,10 +30,12 @@ return {
   -- require 'custom.plugins.gpt-settings',
   -- require 'custom.plugins.cybu-settings',
   -- require 'custom.plugins.avante',
+  require 'custom.plugins.render-markdown',
   require 'custom.plugins.autosession-settings',
   require 'custom.plugins.autotag',
   require 'custom.plugins.neotree-settings',
   --themes
+  -- require 'custom.plugins.themes.ariake-settings',
   -- require 'custom.plugins.themes.oh-lucy-settings',
   require 'custom.plugins.themes.oxocarbon-settings',
   -- require 'custom.plugins.themes.poimandres',
@@ -43,5 +45,4 @@ return {
   -- require 'custom.plugins.themes.nightofox-settings',
   -- require 'custom.plugins.themes.tokyonight-settings',
   -- require 'custom.plugins.themes.tokyonight-custom-settings',
-  require 'custom.plugins.render-markdown'
 }

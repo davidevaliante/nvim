@@ -36,7 +36,11 @@ return {
             icon_only = true,
             padding = { left = 1, right = 0 },
           },
-          "filename",
+          {
+
+            "filename",
+            path = 1,
+          },
           {
             "grapple",
             color = { fg = "#e617c7" }

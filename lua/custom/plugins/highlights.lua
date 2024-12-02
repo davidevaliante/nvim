@@ -18,6 +18,8 @@ local function cmpMenuHighlights()
   local color_seven = '#673AB7'
   local color_eight = '#42be65'
 
+  vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#202020' })
+
   vim.api.nvim_set_hl(0, 'CybuBackground', { fg = text_color, bg = '#1f1f1f' })
   vim.api.nvim_set_hl(0, 'CybuAdjacent', { fg = '#a8a8a8', bg = 'NONE' })
   vim.api.nvim_set_hl(0, 'CybuBorder', { fg = '#ed9140' })

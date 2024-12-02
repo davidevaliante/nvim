@@ -5,7 +5,8 @@
 
 ## Theme
 - cattpuccin https://github.com/catppuccin/nvim
-- tokyonight https://github.com/folke/tokyonight.nvim (current)
+- tokyonight https://github.com/folke/tokyonight.nvim
+- oxocarbon https://github.com/nyoom-engineering/oxocarbon.nvim (current)
 
 ## Plugin manager:
 Lazy -> https://github.com/folke/lazy.nvim
