@@ -1,7 +1,6 @@
 return {
   require 'custom.plugins.comment',
   require 'custom.plugins.gitsigns',
-  require 'custom.plugins.whichkey',
   require 'custom.plugins.telescope_config',
   require 'custom.plugins.lsp-settings',
   require 'custom.plugins.conform',
@@ -18,23 +17,21 @@ return {
   require 'custom.plugins.zenmode-settings',
   require 'custom.plugins.tailwindsort-settings',
   require 'custom.plugins.spectre-settings',
-  require 'custom.plugins.copilot-settings',
-  require 'custom.plugins.copilotcmp-settings',
   require 'custom.plugins.lualine',
   require 'custom.plugins.trouble-settings',
   require 'custom.plugins.diffview-settings',
   require 'custom.plugins.fidget-settings',
-  require 'custom.plugins.grapple-settings',
   require 'custom.plugins.aerial-settings',
-  -- require 'custom.plugins.transparent-settings',
-  -- require 'custom.plugins.gpt-settings',
-  -- require 'custom.plugins.cybu-settings',
-  -- require 'custom.plugins.avante',
+  require 'custom.plugins.tiny-inline-diagnostic-settings',
+  require 'custom.plugins.go-tags-settings',
+  -- require 'custom.plugins.avante', -- DISABLED: causes nvim to auto-close
   require 'custom.plugins.render-markdown',
   require 'custom.plugins.autosession-settings',
   require 'custom.plugins.autotag',
   require 'custom.plugins.neotree-settings',
+
   --themes
+
   -- require 'custom.plugins.themes.ariake-settings',
   -- require 'custom.plugins.themes.oh-lucy-settings',
   require 'custom.plugins.themes.oxocarbon-settings',

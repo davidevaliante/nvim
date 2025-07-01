@@ -14,6 +14,7 @@ return {
       javascriptreact = { 'prettierd', stop_after_first = true },
       typescript = { 'prettierd', stop_after_first = true },
       typescriptreact = { 'prettierd', stop_after_first = true },
+      rust = { "rustfmt", lsp_format = "fallback" },
     },
   },
 }

@@ -7,6 +7,7 @@ local jumpToGrappleIndex = utils_ok and utils.jumpToGrappleIndex or function() e
 -- General
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'Exit INSERT mode' })
 vim.keymap.set('n', '<leader>qq', ':qa!<CR>', { desc = 'Exit Nvim (Close all Buffers)' })
+vim.keymap.set('n', '<C-n>', ':Ex<CR>', { desc = 'exits to netrw' })
 vim.keymap.set('n', '<C-q>', '@q', { desc = 'Repeats the macro registered on h' })
 
 -- Lsp
@@ -18,10 +19,10 @@ vim.keymap.set('n', '<leader>gi', ':Telescope lsp_implementations<CR>',
 
 -- Buffers
 vim.keymap.set('i', '<C-S>', '<Esc>:w<CR>', { desc = 'Write buffer and exit INSERT mode', silent = true })
-vim.keymap.set('n', '<C-S>', ':w<CR>', { desc = 'Write buffer' })
-vim.keymap.set('n', '<C-m><C-m>', notifiGrappleToggle, { desc = 'Add current buffer to Grapple' })
+vim.keymap.set('n', '<C-S>', ':w<CR>', { desc = 'Write buffer and exit INSERT mode', silent = true })
 -- Grapple keymaps (only if available)
 if utils_ok then
+  vim.keymap.set('n', '<C-m><C-m>', notifiGrappleToggle, { desc = 'Add current buffer to Grapple' })
   vim.keymap.set('n', '<Tab>', ':Grapple cycle_tags next<CR>', { desc = 'Cycle next Grapple tag', silent = true })
   vim.keymap.set('n', '<S-Tab>', ':Grapple cycle_tags prev<CR>', { desc = 'Cycle previous Grapple tag', silent = true })
 else
@@ -29,7 +30,6 @@ else
   vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })
   vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Goes to the previous buffer', silent = true })
 end
-
 vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current buffer', silent = true })
 vim.keymap.set('n', '<C-o><C-l>', ':AerialToggle<CR>', { desc = 'Toggles Aerial side panel', silent = true })
 
@@ -62,6 +62,7 @@ local flash = {
 vim.keymap.set('n', '<C-n>', ':Oil<CR>', { desc = 'Opens Oil tree', silent = true })
 
 vim.keymap.set('n', '<C-t>', ':Neotree toggle=true<CR>', { desc = 'Opens the neo tree view', silent = true })
+
 
 vim.keymap.set('n', '<C-\\>', ':ToggleTerm direction=tab<CR>', { desc = 'Opens the terminal in a tab', silent = true })
 vim.keymap.set('n', '<C-p>', ':ToggleTerm direction=float<CR>', { desc = 'Opens a floating terminal', silent = true })

@@ -2,9 +2,10 @@
 return {
   'rmagatti/auto-session',
   config = function()
-    require('auto-session').setup {
+    local safe_setup = require('custom.safe_setup')
+    safe_setup.setup('auto-session', {
       log_level = 'error',
       auto_session_suppress_dirs = { '~/', '/' },
-    }
+    })
   end,
 }

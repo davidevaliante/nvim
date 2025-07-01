@@ -61,3 +61,6 @@ vim.opt.hlsearch = true
 -- views can only be fully collapsed with the global statusline
 -- for avante.nvim
 vim.opt.laststatus = 3
+
+-- required by plugin tiny-inline-diagnostic
+vim.diagnostic.config({ virtual_text = false })

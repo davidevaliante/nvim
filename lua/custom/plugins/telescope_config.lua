@@ -37,13 +37,5 @@ return {
     -- Enable telescope extensions, if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
-
-    local builtin = require 'telescope.builtin'
-
-    require('which-key').add({
-      { "<leader>ff", builtin.find_files,                desc = "[F]ind [F]iles" },
-      { "<leader>fz", builtin.current_buffer_fuzzy_find, desc = "[F]ind in the current buffer [Z]fuzzly" },
-      { "<leader>gg", builtin.live_grep,                 desc = "[G]lobal [G]rep" }
-    })
   end,
 }

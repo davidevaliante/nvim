@@ -25,10 +25,11 @@ local lazy_ui_settings = {
   },
 }
 
+-- Restore full plugin config
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'norcalli/nvim-colorizer.lua',
-  require 'custom.plugins',
+  require 'custom.plugins', -- Full plugin list
 }, {
   ui = lazy_ui_settings,
 })

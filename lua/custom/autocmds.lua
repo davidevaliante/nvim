@@ -13,7 +13,13 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = '*',
   callback = function()
     vim.cmd('silent! write') -- Perform the save silently
-    require('fidget').notify("saved~")
+    -- Only notify if fidget is available
+    local fidget_ok, fidget = pcall(require, 'fidget')
+    if fidget_ok then
+      fidget.notify("saved~")
+    else
+      print("saved~")
+    end
     vim.cmd('echon ""')      -- Clear any message after saving
   end,
 })
