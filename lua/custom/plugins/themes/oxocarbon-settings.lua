@@ -31,5 +31,22 @@ return {
       bold = true
     })
     vim.api.nvim_set_hl(0, 'LspReferenceRead', { bg = 'NONE' })
+    
+    -- Terminal tab highlights
+    vim.api.nvim_set_hl(0, 'TabLineSel', {
+      fg = "#161616",
+      bg = "#ee5396",
+      bold = true,
+    })
+    
+    vim.api.nvim_set_hl(0, 'TabLine', {
+      fg = "#6f6f6f",
+      bg = "NONE",
+    })
+    
+    vim.api.nvim_set_hl(0, 'TabLineFill', {
+      fg = "#525252",
+      bg = "NONE",
+    })
   end
 }

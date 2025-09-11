@@ -214,6 +214,9 @@ All keymaps are defined in `lua/custom/keymaps.lua`. Key highlights:
 #### Terminal
 - `<C-\>` - Toggle terminal (tab)
 - `<C-p>` - Toggle floating terminal
+- `<Alt-1>` to `<Alt-4>` - Open/toggle specific floating terminals
+- `<C-r>` - Rename current terminal (in terminal mode)
+- `<leader>tr` - Rename current terminal (in normal mode)
 
 #### Buffer Navigation
 - `<Tab>` / `<S-Tab>` - Next/previous buffer (or Grapple tags)

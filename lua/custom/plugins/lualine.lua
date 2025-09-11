@@ -11,7 +11,7 @@ local clients_lsp = function()
   for _, client in pairs(clients) do
     table.insert(c, client.name)
   end
-  return " " .. table.concat(c, "|")
+  return " " .. table.concat(c, "|")
 end
 
 
@@ -23,12 +23,12 @@ return {
       options = {
         theme = 'auto',
         component_separators = "",
-        section_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
         disabled_filetypes = { "alpha", "Outline" },
       },
       sections = {
         lualine_a = {
-          { "mode", separator = { left = " ", right = "" }, icon = "" },
+          { "mode", separator = { left = " ", right = "" }, icon = "" },
         },
         lualine_b = {
           {
@@ -49,24 +49,24 @@ return {
         lualine_c = {
           {
             "branch",
-            icon = "",
+            icon = "",
           },
           {
             "diff",
-            symbols = { added = " ", modified = " ", removed = " " },
+            symbols = { added = " ", modified = " ", removed = " " },
             colored = false,
           },
         },
         lualine_x = {
           {
             "diagnostics",
-            symbols = { error = " ", warn = " ", info = " ", hint = "" },
+            symbols = { error = " ", warn = " ", info = " ", hint = "" },
             update_in_insert = true,
           },
         },
         lualine_y = { clients_lsp },
         lualine_z = {
-          { "location", separator = { left = "", right = " " }, icon = "" },
+          { "location", separator = { left = "", right = " " }, icon = "" },
         },
       },
       inactive_sections = {

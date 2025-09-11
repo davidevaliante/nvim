@@ -17,21 +17,7 @@ local function filterReactDTS(value)
   return string.match(value.targetUri, 'd.ts') == nil
 end
 
-local function notifyGrappleToggle()
-  require("grapple").toggle()
-  require('fidget').notify("toggled mark for this buffer", nil, {
-    annote = "Grapple"
-  })
-end
-
-local function jumpToGrappleIndex(index)
-  require('grapple').select({ index = index })
-end
-
-
 return {
-  jumpToGrappleIndex = jumpToGrappleIndex,
-  notifiGrappleToggle = notifyGrappleToggle,
   filter = filter,
   filterReactDTS = filterReactDTS,
 }

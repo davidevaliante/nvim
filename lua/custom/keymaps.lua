@@ -1,7 +1,5 @@
 -- Safe loading of utils
 local utils_ok, utils = pcall(require, 'custom.utils')
-local notifiGrappleToggle = utils_ok and utils.notifiGrappleToggle or function() end
-local jumpToGrappleIndex = utils_ok and utils.jumpToGrappleIndex or function() end
 -- [Custom keymaps]
 
 -- General
@@ -19,28 +17,13 @@ vim.keymap.set('n', '<leader>gi', ':Telescope lsp_implementations<CR>',
 -- Buffers
 vim.keymap.set('i', '<C-S>', '<Esc>:w<CR>', { desc = 'Write buffer and exit INSERT mode', silent = true })
 vim.keymap.set('n', '<C-S>', ':w<CR>', { desc = 'Write buffer' })
-vim.keymap.set('n', '<C-m><C-m>', notifiGrappleToggle, { desc = 'Add current buffer to Grapple' })
--- Grapple keymaps (only if available)
-if utils_ok then
-  vim.keymap.set('n', '<Tab>', ':Grapple cycle_tags next<CR>', { desc = 'Cycle next Grapple tag', silent = true })
-  vim.keymap.set('n', '<S-Tab>', ':Grapple cycle_tags prev<CR>', { desc = 'Cycle previous Grapple tag', silent = true })
-else
-  -- Fallback buffer navigation
-  vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })
-  vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Goes to the previous buffer', silent = true })
-end
+-- Buffer navigation
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = 'Goes to the next buffer', silent = true })
+vim.keymap.set('n', '<S-Tab>', ':bprev<CR>', { desc = 'Goes to the previous buffer', silent = true })
 
 vim.keymap.set('n', '<C-d><C-d>', ':bdelete<CR>', { desc = 'Closes the current buffer', silent = true })
 vim.keymap.set('n', '<C-o><C-l>', ':AerialToggle<CR>', { desc = 'Toggles Aerial side panel', silent = true })
 
--- Select grapple index (only if available)
-if utils_ok then
-  for i = 1, 9 do
-    vim.keymap.set('n', '<A-' .. i .. '>', function()
-      jumpToGrappleIndex(i)
-    end, { noremap = true, silent = true })
-  end
-end
 
 -- Code Editing
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected block up', silent = true })
@@ -67,6 +50,18 @@ vim.keymap.set('n', '<C-\\>', ':ToggleTerm direction=tab<CR>', { desc = 'Opens t
 vim.keymap.set('n', '<C-p>', ':ToggleTerm direction=float<CR>', { desc = 'Opens a floating terminal', silent = true })
 vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>',
   { desc = 'Toggles the currently float terminal', silent = true })
+
+-- Multiple floating terminals with Alt+number
+for i = 1, 4 do
+  vim.keymap.set('n', '<A-' .. i .. '>', ':' .. i .. 'ToggleTerm direction=float<CR>', 
+    { desc = 'Open floating terminal ' .. i, silent = true })
+  vim.keymap.set('t', '<A-' .. i .. '>', '<C-\\><C-n>:' .. i .. 'ToggleTerm direction=float<CR>',
+    { desc = 'Toggle floating terminal ' .. i .. ' from terminal mode', silent = true })
+end
+
+-- Terminal rename command
+vim.keymap.set('n', '<leader>tr', ':TermRename ', { desc = 'Rename current terminal' })
+-- Note: Ctrl+R in terminal mode is defined in toggleterm config for renaming
 
 vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = 'Opens LazyGit', silent = true })
 
