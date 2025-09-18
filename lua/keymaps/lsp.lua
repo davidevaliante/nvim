@@ -74,7 +74,7 @@ return function(km)
   km.nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
   km.nmap('<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic error messages' })
   km.nmap('<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic quickfix list' })
-  
+
   -- Trouble integration (with fallback)
   km.plugin_map('trouble', 'n', '<leader>xx', ':Trouble diagnostics toggle focus=true<CR>',
     { desc = 'Open diagnostics in Trouble' },

@@ -122,13 +122,17 @@ return {
         -- Terminal rename keybinding
         vim.keymap.set('t', '<C-r>', function()
           vim.cmd('stopinsert')
-          vim.ui.input({ prompt = 'Rename terminal to: ', default = terminal_names[term.id] }, function(input)
+          local current_name = terminal_names[term.id]
+          vim.ui.input({ prompt = 'Rename terminal to: ', default = '' }, function(input)
             if input and input ~= "" then
               terminal_names[term.id] = input
               vim.b.terminal_name = input
               -- Refresh winbar after rename
               vim.wo.winbar = TerminalTabs.generate_winbar(term.id)
               vim.notify("Terminal " .. term.id .. " renamed to: " .. input, vim.log.levels.INFO)
+            elseif input == nil then
+              -- Operation was cancelled, keep current name
+              terminal_names[term.id] = current_name
             end
             vim.cmd('startinsert')
           end)

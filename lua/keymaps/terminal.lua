@@ -42,6 +42,10 @@ return function(km)
   km.plugin_map('toggleterm', 't', '<A-4>', '<C-\\><C-n>:4ToggleTerm direction=float<CR>',
     { desc = 'Toggle floating terminal 4 from terminal mode' })
 
+  -- Terminal rename command
+  km.plugin_map('toggleterm', 'n', '<leader>tr', ':TermRename ',
+    { desc = 'Rename current terminal' })
+
   -- Navigate between terminals
   km.plugin_map('toggleterm', 'n', '<leader>tn', ':ToggleTermToggleAll<CR>',
     { desc = 'Toggle all terminals' },
