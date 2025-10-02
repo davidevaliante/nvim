@@ -24,7 +24,8 @@ return {
   require 'custom.plugins.aerial-settings',
   require 'custom.plugins.tiny-inline-diagnostic-settings',
   require 'custom.plugins.imagenvim-settings',
-  require 'custom.plugins.go-tags-settings',
+  -- require 'custom.plugins.go-tags-settings', -- Disabled in favor of go.nvim
+  require 'custom.plugins.go-nvim-settings',
   -- require 'custom.plugins.avante', -- DISABLED: causes nvim to auto-close
   require 'custom.plugins.render-markdown',
   require 'custom.plugins.autosession-settings',

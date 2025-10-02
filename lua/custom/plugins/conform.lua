@@ -15,6 +15,9 @@ return {
       typescript = { 'prettierd', stop_after_first = true },
       typescriptreact = { 'prettierd', stop_after_first = true },
       rust = { "rustfmt", lsp_format = "fallback" },
+      nginx = { 'nginxfmt' },
+      html = { 'prettierd', stop_after_first = true },
+      css = { 'prettierd', stop_after_first = true },
     },
   },
 }

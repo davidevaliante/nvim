@@ -23,5 +23,8 @@ return {
       end,
     },
   },
+  nginx_language_server = {},
+  html = {},
+  cssls = {},
   -- denols = require 'custom.plugins.lspservers.denols',
 }
