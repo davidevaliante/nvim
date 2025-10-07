@@ -91,3 +91,44 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
+
+-- Make quickfix list modifiable and add keybindings for deleting items
+vim.api.nvim_create_autocmd({ 'FileType', 'BufWinEnter', 'BufReadPost' }, {
+  callback = function(event)
+    if vim.bo[event.buf].buftype == 'quickfix' then
+      vim.bo[event.buf].modifiable = true
+      vim.bo[event.buf].buflisted = false
+
+      -- Function to remove items from quickfix list
+      local function remove_qf_item()
+        local line = vim.fn.line('.')
+        local qf_list = vim.fn.getqflist()
+        table.remove(qf_list, line)
+        vim.fn.setqflist(qf_list, 'r')
+        vim.fn.cursor(math.min(line, #qf_list), 1)
+      end
+
+      -- Function to remove multiple items (visual mode)
+      local function remove_qf_items()
+        local start_line = vim.fn.line("'<")
+        local end_line = vim.fn.line("'>")
+        local qf_list = vim.fn.getqflist()
+
+        for i = end_line, start_line, -1 do
+          table.remove(qf_list, i)
+        end
+
+        vim.fn.setqflist(qf_list, 'r')
+        vim.fn.cursor(math.min(start_line, #qf_list), 1)
+      end
+
+      -- Map dd to remove item in normal mode
+      vim.keymap.set('n', 'dd', remove_qf_item, { buffer = event.buf, desc = 'Delete quickfix item' })
+
+      -- Map d in visual mode to remove selected items
+      vim.keymap.set('x', 'd', function()
+        remove_qf_items()
+      end, { buffer = event.buf, desc = 'Delete quickfix items' })
+    end
+  end,
+})

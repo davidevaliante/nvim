@@ -27,6 +27,7 @@ A robust, modular Neovim configuration built for productivity and maintainabilit
 - **🎯 Navigation**: Smart buffer and project navigation with Grapple
 - **💫 UI Enhancements**: Beautiful statusline, trouble diagnostics, and more
 - **🛡️ Error Handling**: Robust error handling and fallback systems
+- **📋 Quickfix Management**: Enhanced quickfix lists with item deletion support
 
 ## 🔌 Plugin Overview
 
@@ -204,6 +205,11 @@ All keymaps are defined in `lua/custom/keymaps.lua`. Key highlights:
 - `[d` / `]d` - Previous/next diagnostic
 - `<leader>e` - Show diagnostic in float
 - `<leader>xx` - Open Trouble diagnostics
+
+#### Quickfix List
+- `<C-q>` - Send Telescope results to quickfix (in Telescope)
+- `dd` - Delete item from quickfix list (in quickfix window)
+- `d` (visual) - Delete multiple items from quickfix list
 
 #### Git Operations
 - `<leader>lg` - Open LazyGit
@@ -508,6 +514,15 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 })
 ```
 
+### Current Auto Commands
+
+The configuration includes several built-in auto commands:
+
+1. **Highlight on Yank**: Briefly highlights text when yanking
+2. **Save Notifications**: Shows "saved~" notification after writing files
+3. **LSP Keybindings**: Automatically sets up LSP keymaps when LSP attaches
+4. **Quickfix Management**: Makes quickfix lists modifiable with `dd` deletion support
+
 ## 🔧 Troubleshooting
 
 ### Common Issues
@@ -648,6 +663,14 @@ Run health checks to diagnose issues:
 - Better diagnostic display
 - Quickfix integration
 - File preview
+
+#### Quickfix Enhancements
+**Purpose**: Enhanced quickfix list management.
+**Features**:
+- Modifiable quickfix lists
+- Delete items with `dd` (single) or visual `d` (multiple)
+- Properly updates underlying quickfix data
+- Works seamlessly with Telescope's `<C-q>` send-to-quickfix
 
 #### Treesitter
 **Purpose**: Modern syntax highlighting and text objects.
