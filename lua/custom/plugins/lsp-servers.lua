@@ -26,5 +26,6 @@ return {
   nginx_language_server = {},
   html = {},
   cssls = {},
+  gdscript = {},
   -- denols = require 'custom.plugins.lspservers.denols',
 }

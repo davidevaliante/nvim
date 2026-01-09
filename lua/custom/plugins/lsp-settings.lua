@@ -16,9 +16,14 @@ return { -- LSP Configuration & Plugins
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     local servers = require 'custom.plugins.lsp-servers'
-    local ensure_installed = vim.tbl_keys(servers or {})
 
-    safe_setup.setup('mason-tool-installer', { ensure_installed = vim.tbl_keys(servers or {}) })
+    -- Servers not managed by Mason (built into external tools)
+    local non_mason_servers = { 'gdscript' }
+    local ensure_installed = vim.tbl_filter(function(server)
+      return not vim.tbl_contains(non_mason_servers, server)
+    end, vim.tbl_keys(servers or {}))
+
+    safe_setup.setup('mason-tool-installer', { ensure_installed = ensure_installed })
 
     local ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
     if ok and cmp_nvim_lsp.default_capabilities then
@@ -41,5 +46,17 @@ return { -- LSP Configuration & Plugins
         end,
       },
     })
+
+    -- Setup non-Mason servers manually
+    local ok_lsp, lspconfig = pcall(require, 'lspconfig')
+    if ok_lsp then
+      for _, server_name in ipairs(non_mason_servers) do
+        local server = servers[server_name] or {}
+        server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+        if lspconfig[server_name] then
+          lspconfig[server_name].setup(server)
+        end
+      end
+    end
   end,
 }
