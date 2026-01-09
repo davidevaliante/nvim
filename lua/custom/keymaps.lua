@@ -52,8 +52,8 @@ vim.keymap.set('t', '<C-p>', '<C-\\><C-n>:ToggleTerm direction=float<CR>',
   { desc = 'Toggles the currently float terminal', silent = true })
 
 -- Multiple floating terminals with Alt+number
-for i = 1, 4 do
-  vim.keymap.set('n', '<A-' .. i .. '>', ':' .. i .. 'ToggleTerm direction=float<CR>', 
+for i = 1, 8 do
+  vim.keymap.set('n', '<A-' .. i .. '>', ':' .. i .. 'ToggleTerm direction=float<CR>',
     { desc = 'Open floating terminal ' .. i, silent = true })
   vim.keymap.set('t', '<A-' .. i .. '>', '<C-\\><C-n>:' .. i .. 'ToggleTerm direction=float<CR>',
     { desc = 'Toggle floating terminal ' .. i .. ' from terminal mode', silent = true })
