@@ -21,7 +21,7 @@ end
 -- Get list of open terminal IDs
 function TerminalTabs.get_open_terminals()
   local open_terminals = {}
-  for i = 1, 4 do
+  for i = 1, 8 do
     if TerminalTabs.is_terminal_open(i) then
       table.insert(open_terminals, i)
     end

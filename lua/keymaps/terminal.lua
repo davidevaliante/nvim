@@ -29,6 +29,22 @@ return function(km)
     { desc = 'Open floating terminal 4' },
     { rhs = ':terminal<CR>', opts = { desc = 'Open built-in terminal (fallback)' } })
 
+  km.plugin_map('toggleterm', 'n', '<A-5>', ':5ToggleTerm direction=float<CR>',
+    { desc = 'Open floating terminal 5' },
+    { rhs = ':terminal<CR>', opts = { desc = 'Open built-in terminal (fallback)' } })
+
+  km.plugin_map('toggleterm', 'n', '<A-6>', ':6ToggleTerm direction=float<CR>',
+    { desc = 'Open floating terminal 6' },
+    { rhs = ':terminal<CR>', opts = { desc = 'Open built-in terminal (fallback)' } })
+
+  km.plugin_map('toggleterm', 'n', '<A-7>', ':7ToggleTerm direction=float<CR>',
+    { desc = 'Open floating terminal 7' },
+    { rhs = ':terminal<CR>', opts = { desc = 'Open built-in terminal (fallback)' } })
+
+  km.plugin_map('toggleterm', 'n', '<A-8>', ':8ToggleTerm direction=float<CR>',
+    { desc = 'Open floating terminal 8' },
+    { rhs = ':terminal<CR>', opts = { desc = 'Open built-in terminal (fallback)' } })
+
   -- Terminal mode mappings for Alt+number
   km.plugin_map('toggleterm', 't', '<A-1>', '<C-\\><C-n>:1ToggleTerm direction=float<CR>',
     { desc = 'Toggle floating terminal 1 from terminal mode' })
@@ -41,6 +57,18 @@ return function(km)
 
   km.plugin_map('toggleterm', 't', '<A-4>', '<C-\\><C-n>:4ToggleTerm direction=float<CR>',
     { desc = 'Toggle floating terminal 4 from terminal mode' })
+
+  km.plugin_map('toggleterm', 't', '<A-5>', '<C-\\><C-n>:5ToggleTerm direction=float<CR>',
+    { desc = 'Toggle floating terminal 5 from terminal mode' })
+
+  km.plugin_map('toggleterm', 't', '<A-6>', '<C-\\><C-n>:6ToggleTerm direction=float<CR>',
+    { desc = 'Toggle floating terminal 6 from terminal mode' })
+
+  km.plugin_map('toggleterm', 't', '<A-7>', '<C-\\><C-n>:7ToggleTerm direction=float<CR>',
+    { desc = 'Toggle floating terminal 7 from terminal mode' })
+
+  km.plugin_map('toggleterm', 't', '<A-8>', '<C-\\><C-n>:8ToggleTerm direction=float<CR>',
+    { desc = 'Toggle floating terminal 8 from terminal mode' })
 
   -- Terminal rename command
   km.plugin_map('toggleterm', 'n', '<leader>tr', ':TermRename ',
