@@ -39,24 +39,18 @@ return { -- LSP Configuration & Plugins
         function(server_name)
           local server = servers[server_name] or {}
           server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-          local ok_lsp, lspconfig = pcall(require, 'lspconfig')
-          if ok_lsp and type(lspconfig) == 'table' and lspconfig[server_name] then
-            lspconfig[server_name].setup(server)
-          end
+          vim.lsp.config(server_name, server)
+          vim.lsp.enable(server_name)
         end,
       },
     })
 
     -- Setup non-Mason servers manually
-    local ok_lsp, lspconfig = pcall(require, 'lspconfig')
-    if ok_lsp then
-      for _, server_name in ipairs(non_mason_servers) do
-        local server = servers[server_name] or {}
-        server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-        if lspconfig[server_name] then
-          lspconfig[server_name].setup(server)
-        end
-      end
+    for _, server_name in ipairs(non_mason_servers) do
+      local server = servers[server_name] or {}
+      server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+      vim.lsp.config(server_name, server)
+      vim.lsp.enable(server_name)
     end
   end,
 }
