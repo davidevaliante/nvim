@@ -59,6 +59,20 @@ return {
         },
         lualine_x = {
           {
+            function()
+              if _G.whisper_module then
+                local status = _G.whisper_module.lualine_component()
+                if status and status ~= '' then
+                  return status
+                end
+              end
+              return ''
+            end,
+            cond = function()
+              return vim.bo.filetype == 'markdown' and _G.whisper_module ~= nil
+            end,
+          },
+          {
             "diagnostics",
             symbols = { error = " ", warn = " ", info = " ", hint = "" },
             update_in_insert = true,

@@ -28,6 +28,7 @@ return {
   require 'custom.plugins.go-nvim-settings',
   -- require 'custom.plugins.avante', -- DISABLED: causes nvim to auto-close
   require 'custom.plugins.render-markdown',
+  require 'custom.plugins.whisper-settings',
   require 'custom.plugins.autosession-settings',
   require 'custom.plugins.autotag',
   require 'custom.plugins.neotree-settings',

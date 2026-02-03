@@ -14,6 +14,7 @@ function M.load_modular_keymaps()
     'lsp',
     'telescope',
     'plugins',
+    'whisper',
   }
 
   -- Register each module

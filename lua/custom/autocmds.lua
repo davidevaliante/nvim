@@ -1,3 +1,15 @@
+-- Disable options that break TUI apps (e.g. Claude Code) in terminal buffers
+vim.api.nvim_create_autocmd('TermOpen', {
+  group = vim.api.nvim_create_augroup('terminal-buffer-settings', { clear = true }),
+  callback = function()
+    vim.wo.number = false
+    vim.wo.relativenumber = false
+    vim.wo.cursorline = false
+    vim.wo.signcolumn = 'no'
+    vim.wo.scrolloff = 0
+  end,
+})
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
