@@ -23,6 +23,7 @@ return {
       end,
     },
   },
+  gopls = require 'custom.plugins.lspservers.gopls',
   nginx_language_server = {},
   html = {},
   cssls = {},

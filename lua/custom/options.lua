@@ -64,3 +64,6 @@ vim.opt.laststatus = 3
 
 -- required by plugin tiny-inline-diagnostic
 vim.diagnostic.config({ virtual_text = false })
+
+-- Source .nvim.lua files in project directories
+vim.opt.exrc = true
