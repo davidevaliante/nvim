@@ -12,11 +12,15 @@ return {
       },
     },
     handlers = {
-      -- this is to avoid double results from node modules with <leader>gd
+      -- filter out React DTS duplicates and jump directly to the first result
       ['textDocument/definition'] = function(err, result, method, ...)
         if vim.islist(result) and #result > 1 then
           local filtered_result = filter(result, filterReactDTS)
-          return vim.lsp.handlers['textDocument/definition'](err, filtered_result, method, ...)
+          result = #filtered_result > 0 and filtered_result or result
+        end
+
+        if vim.islist(result) and #result > 1 then
+          result = { result[1] }
         end
 
         vim.lsp.handlers['textDocument/definition'](err, result, method, ...)

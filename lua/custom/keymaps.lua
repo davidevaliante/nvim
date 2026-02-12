@@ -8,8 +8,17 @@ vim.keymap.set('n', '<leader>qq', ':qa!<CR>', { desc = 'Exit Nvim (Close all Buf
 vim.keymap.set('n', '<C-q>', '@q', { desc = 'Repeats the macro registered on h' })
 
 -- Lsp
-vim.keymap.set('n', '<leader>gd', ':lua vim.lsp.buf.definition()<CR>',
-  { desc = 'Goes to definition under cursor', silent = true })
+vim.keymap.set('n', '<leader>gd', function()
+  local client = vim.lsp.get_clients({ bufnr = 0 })[1]
+  local params = vim.lsp.util.make_position_params(0, client.offset_encoding)
+  vim.lsp.buf_request(0, 'textDocument/definition', params, function(err, result)
+    if err or not result or (vim.islist(result) and #result == 0) then return end
+    local target = vim.islist(result) and result[1] or result
+    local uri = target.uri or target.targetUri
+    local range = target.range or target.targetSelectionRange or target.targetRange
+    vim.lsp.util.show_document({ uri = uri, range = range }, 'utf-8', { focus = true })
+  end)
+end, { desc = 'Goes to definition under cursor', silent = true })
 vim.keymap.set('n', '<leader>gi', ':Telescope lsp_implementations<CR>',
   { desc = 'Goes to implementation under cursor', silent = true })
 
