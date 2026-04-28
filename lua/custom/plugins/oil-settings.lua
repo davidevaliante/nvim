@@ -10,6 +10,19 @@ return {
       ["<C-p>"] = function()
         vim.cmd('ToggleTerm direction=float')
       end,
+      ["<C-o>"] = {
+        callback = function()
+          local dir = require("oil").get_current_dir()
+          if not dir then return end
+          if vim.fn.has("wsl") == 1 then
+            local win_path = vim.fn.system("wslpath -w " .. vim.fn.shellescape(dir)):gsub("\n$", "")
+            vim.fn.system("explorer.exe " .. vim.fn.shellescape(win_path))
+          else
+            vim.ui.open(dir)
+          end
+        end,
+        desc = "Open current directory in system file explorer",
+      },
     })
 
     safe_setup.setup('oil', {

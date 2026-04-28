@@ -60,17 +60,15 @@ return {
         lualine_x = {
           {
             function()
-              if _G.whisper_module then
-                local status = _G.whisper_module.lualine_component()
-                if status and status ~= '' then
-                  return status
-                end
+              if _G.whisper_module and _G.whisper_module.lualine_component then
+                return _G.whisper_module.lualine_component()
               end
               return ''
             end,
             cond = function()
               return vim.bo.filetype == 'markdown' and _G.whisper_module ~= nil
             end,
+            color = { fg = '#e06c75' },
           },
           {
             "diagnostics",

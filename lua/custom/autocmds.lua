@@ -1,12 +1,22 @@
 -- Disable options that break TUI apps (e.g. Claude Code) in terminal buffers
 vim.api.nvim_create_autocmd('TermOpen', {
   group = vim.api.nvim_create_augroup('terminal-buffer-settings', { clear = true }),
-  callback = function()
+  callback = function(args)
     vim.wo.number = false
     vim.wo.relativenumber = false
     vim.wo.cursorline = false
     vim.wo.signcolumn = 'no'
     vim.wo.scrolloff = 0
+
+    -- Reliable paste in terminal mode: send clipboard as one chunk wrapped in
+    -- bracketed-paste markers so TUIs (Claude Code, etc.) treat it as a paste
+    -- rather than per-character typing with stray Enters.
+    vim.keymap.set('t', '<C-v>', function()
+      local clip = vim.fn.getreg('+')
+      if clip == '' then clip = vim.fn.getreg('*') end
+      if clip == '' then return end
+      vim.api.nvim_chan_send(vim.bo.channel, '\27[200~' .. clip .. '\27[201~')
+    end, { buffer = args.buf, desc = 'Paste clipboard into terminal as one chunk' })
   end,
 })
 
