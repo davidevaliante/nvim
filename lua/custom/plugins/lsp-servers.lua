@@ -32,5 +32,6 @@ return {
   html = {},
   cssls = {},
   gdscript = {},
+  nixd = require 'custom.plugins.lspservers.nixd',
   -- denols = require 'custom.plugins.lspservers.denols',
 }
