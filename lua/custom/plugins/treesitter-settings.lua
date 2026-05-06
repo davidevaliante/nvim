@@ -3,6 +3,10 @@
 return {
   -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
+  -- Pin to `master` (legacy API). The new `main` branch is a rewrite that
+  -- drops `nvim-treesitter.configs` and `ft_to_lang` — telescope.nvim still
+  -- calls those, so we stay on master until the ecosystem catches up.
+  branch = 'master',
   build = ':TSUpdate',
   config = function()
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`

@@ -1,11 +1,8 @@
 -- https://github.com/rmagatti/auto-session
+-- Disabled: existing session files reference SessionLoadPre group that
+-- doesn't exist in current nvim, causing E216 on launch. Re-enable later
+-- if sessions become useful.
 return {
   'rmagatti/auto-session',
-  config = function()
-    local safe_setup = require('custom.safe_setup')
-    safe_setup.setup('auto-session', {
-      log_level = 'error',
-      auto_session_suppress_dirs = { '~/', '/' },
-    })
-  end,
+  enabled = false,
 }
