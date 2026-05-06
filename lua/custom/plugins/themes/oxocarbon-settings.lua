@@ -11,6 +11,17 @@ return {
     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
     vim.cmd.colorscheme 'oxocarbon'
 
+    -- Pin editor bg to oxocarbon's `blend` (#131313) so kitty, the nvim
+    -- editor, and Telescope's float window are all visually uniform.
+    -- Defaults paint Normal at base00 (#161616), one shade lighter.
+    local editor_bg = '#131313'
+    for _, group in ipairs({
+      'Normal', 'NormalNC', 'SignColumn', 'EndOfBuffer',
+      'LineNr', 'CursorLineNr', 'FoldColumn', 'StatusLine', 'StatusLineNC',
+    }) do
+      vim.api.nvim_set_hl(0, group, { bg = editor_bg })
+    end
+
     -- You can configure highlights by doing something like
     vim.cmd.hi 'Comment gui=none'
     vim.api.nvim_set_hl(0, 'FlashMatch', {
