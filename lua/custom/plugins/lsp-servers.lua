@@ -6,8 +6,8 @@ return {
   ts_ls = {
     init_options = {
       preferences = {
-        importModuleSpecifierPreference = 'non-relative',
-        importModuleSpecifier = 'non-relative',
+        importModuleSpecifierPreference = 'relative',
+        importModuleSpecifier = 'relative',
         importModuleSpecifierEnding = 'minimal',
       },
     },
