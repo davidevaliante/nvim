@@ -16,6 +16,13 @@ return {
   settings = {
     gopls = {
       gofumpt = true,
+      -- game-service splits handlers by //go:build DEBUG vs !DEBUG. gopls can
+      -- only analyze one build config; without this it defaults to the !DEBUG
+      -- side and reports "no package metadata" for every DEBUG-tagged file
+      -- (round_paid_debug_v2.go, round_debug.go, feature_debug.go, ...).
+      -- Building with the DEBUG tag restores LSP features in those files;
+      -- only round_prod.go (!DEBUG) is left unanalyzed.
+      buildFlags = { '-tags=DEBUG' },
     },
   },
 }
