@@ -31,6 +31,12 @@ require('lazy').setup({
   require 'custom.plugins',
 }, {
   ui = lazy_ui_settings,
+  -- luarocks/Lua 5.1 isn't on PATH under NixOS, so lazy's rockspec builds fail
+  -- every launch (oxocarbon.nvim et al.) and cascade into "Too many rounds of
+  -- missing plugins". Nothing here needs luarocks-installed rocks at runtime:
+  -- image.nvim uses the ImageMagick CLI (`processor = "magick_cli"`, build =
+  -- false) and the rest are pure-Lua plugins loaded from their git checkouts.
+  rocks = { enabled = false },
 })
 
 -- avante tokenizer startup as suggested in their docs

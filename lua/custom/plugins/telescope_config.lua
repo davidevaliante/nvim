@@ -2,7 +2,11 @@
 return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
-  branch = '0.1.x',
+  -- Track `master`: the `0.1.x` stable line still calls nvim-treesitter's
+  -- removed legacy API (`parsers.ft_to_lang`, `nvim-treesitter.configs`) and
+  -- crashes with treesitter's `main` branch. `master` previews via native
+  -- `vim.treesitter`. Pinned to a specific commit in lazy-lock.json.
+  branch = 'master',
   dependencies = {
     'nvim-lua/plenary.nvim',
     {
